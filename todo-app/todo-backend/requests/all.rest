@@ -1,0 +1,17 @@
+### Tells you how many visits
+GET http://localhost:3000
+
+### Get all todo items
+GET http://localhost:3000/todos
+
+### Get a single todo item:
+GET http://localhost:3000/todos/670915d703aa14ad9559139f
+
+### Update a todo item:
+PUT http://localhost:3000/todos/670915d703aa14ad9559139f
+Content-Type: application/json
+
+{
+    "text": "Learn about containers, continued",
+    "done": false
+}
