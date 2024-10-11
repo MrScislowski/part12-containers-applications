@@ -6,7 +6,13 @@ const router = express.Router();
 const configs = require('../util/config')
 
 let visits = 0
-redis.setAsync('todo:count', 0)
+
+// If the todo count has never been set, set it to zero
+redis.getAsync('todo:count').then(result => {
+  if (!result) {
+    redis.setAsync('todo:count', 0);
+  }
+})
 
 /* GET index data. */
 router.get('/', async (req, res) => {
