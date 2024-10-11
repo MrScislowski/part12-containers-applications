@@ -15,3 +15,15 @@ Content-Type: application/json
     "text": "Learn about containers, continued",
     "done": false
 }
+
+### POST a todo item
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "text": "try statistics endpoint with redis",
+    "done": false
+}
+
+### try out redis... set value
+GET http://localhost:3000/statistics
