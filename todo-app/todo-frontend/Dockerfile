@@ -6,6 +6,7 @@ COPY . .
 
 RUN npm ci
 
+# Not really sure how necessary this is, as I set an environment variable in the npm script itself...
 ENV VITE_BACKEND_URL=http://localhost:3000
 RUN npm run build
 
