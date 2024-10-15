@@ -1,0 +1,18 @@
+services:
+  todo-frontend-dev:
+    image: todo-frontend-dev-image
+    volumes:
+      - ./todo-frontend:/usr/src/app
+    ports:
+      - 5173:5173
+    container_name: todo-frontend-dev
+  
+  nginx:
+    image: nginx:alpine
+    volumes: 
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - todo-frontend-dev
