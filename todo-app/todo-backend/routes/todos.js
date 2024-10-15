@@ -4,6 +4,10 @@ const redis = require('../redis');
 
 const router = express.Router();
 
+router.get('/devtest', async (_, res) => {
+  res.send('its working just fine')
+})
+
 /* GET todos listing. */
 router.get('/', async (_, res) => {
   const todos = await Todo.find({})

@@ -27,3 +27,6 @@ Content-Type: application/json
 
 ### try out redis... set value
 GET http://localhost:3000/statistics
+
+###
+GET http://localhost:3000/todos/devtest
