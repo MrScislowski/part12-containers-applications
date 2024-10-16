@@ -7,8 +7,7 @@ COPY . .
 
 RUN npm ci
 
-# Not really sure how necessary this is, as I set an environment variable in the npm script itself...
-ENV VITE_BACKEND_URL=http://localhost:3000
+ENV VITE_BACKEND_URL=http://localhost:8080/api
 RUN npm run build
 
 ########## test stage ##########

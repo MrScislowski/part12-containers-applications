@@ -10,3 +10,6 @@ RUN npm ci
 # USER node
 
 CMD npm start
+
+# build this as an image:
+# docker build -t todo-backend-image .
