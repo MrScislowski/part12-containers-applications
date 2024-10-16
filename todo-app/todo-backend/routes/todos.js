@@ -5,7 +5,7 @@ const redis = require('../redis');
 const router = express.Router();
 
 router.get('/devtest', async (_, res) => {
-  res.send('its working just fine')
+  res.send('its working just fine, tyvm')
 })
 
 /* GET todos listing. */

@@ -14,8 +14,6 @@ services:
       - ./todo-backend/redis_data:/data
   todo-backend-dev:
     image: todo-backend-dev-image
-    ports:
-      - 3000:3000
     environment:
       - MONGO_URL=mongodb://the_username:the_password@mongo:27017/test
       - REDIS_URL=redis://redis:6379
@@ -29,8 +27,6 @@ services:
     image: todo-frontend-dev-image
     volumes:
       - ./todo-frontend:/usr/src/app
-    ports:
-      - 5173:5173
     container_name: todo-frontend-dev
 
   nginx:

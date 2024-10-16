@@ -29,4 +29,7 @@ Content-Type: application/json
 GET http://localhost:3000/statistics
 
 ###
-GET http://localhost:3000/todos/devtest
+GET http://localhost:8080/api/todos/devtest
+
+### check proxied backend
+GET http://localhost:8080/api/todos
